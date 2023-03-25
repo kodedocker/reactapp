@@ -1,6 +1,13 @@
 // JSX XML
 function App() {
-  return <h1>Hello</h1>;
+  return (
+    <div>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur,
+      doloremque reiciendis distinctio unde sit, quisquam debitis esse
+      praesentium ipsum eveniet dolorum et? Aliquid exercitationem animi
+      voluptates, eveniet assumenda accusamus dicta!
+    </div>
+  );
 }
 
 export default App;
