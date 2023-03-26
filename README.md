@@ -35,6 +35,8 @@
 - Styling
   - css
   - bootstrap
+  - tailwind
+  - material
 - Routing
 - State Managment
 - API Integration
