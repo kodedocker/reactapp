@@ -1,42 +1,55 @@
+import { useRef, useState } from "react";
+
 function App() {
-  let project = "react wod";
+  return (
+    <div>
+      <HelloInputEvent2 />
+      <HelloInputEvent1 />
+    </div>
+  );
+}
 
-  let handleClick1 = () => {
-    console.log("Click 1");
-  };
+function HelloInputEvent2() {
+  let messageRef = useRef();
+  let [message, setMessage] = useState("Option2");
 
-  // e -> this is optinal
-  let handleClick2 = (e) => {
-    console.log("Click 2", e);
-  };
+  let saveMe = () => {
+    console.log(messageRef.current.value);
 
-  // p1 - use defined, if userd pass this as arg.
-  // else this will become e
-  let handleClick3 = (p1) => {
-    console.log("Click 3", p1);
-  };
+    let newMessage = messageRef.current.value;
+    setMessage(newMessage);
 
-  let handleClick4 = (e, p1) => {
-    console.log(e, p1);
+    messageRef.current.value = "";
   };
 
   return (
     <div>
-      <h1>Hello Event Binding</h1>
-      <input type="button" value="Option1" onClick={handleClick1} />
-      <input type="button" value="Option2" onClick={handleClick2} />
+      <h1>Option2 + Event Binding</h1>
+      <input type="text" ref={messageRef} placeholder="Enter here...." />
+      <input type="button" value="Save" onClick={saveMe} />
 
-      <input
-        type="button"
-        value="Option3"
-        onClick={() => handleClick3(project)}
-      />
+      <div>{message}</div>
+      <hr />
+    </div>
+  );
+}
 
-      <input
-        type="button"
-        value="Option4"
-        onClick={(e) => handleClick4(e, project)}
-      />
+function HelloInputEvent1() {
+  let [message, setMessage] = useState("Hello World");
+
+  let saveMe = () => {
+    let newMessage = document.querySelector("#id1").value;
+    setMessage(newMessage);
+  };
+
+  return (
+    <div>
+      <h1>Option1 + Event Binding</h1>
+      <input type="text" id="id1" placeholder="Enter here...." />
+      <input type="button" value="Save" onClick={saveMe} />
+
+      <div>{message}</div>
+      <hr />
     </div>
   );
 }
