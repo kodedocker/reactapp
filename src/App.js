@@ -3,43 +3,67 @@ import { useState } from "react";
 function App() {
   return (
     <div>
+      <h1>List Assignment</h1>
+      <ListDemo1 />
       <ListDemo />
+    </div>
+  );
+}
+
+function ListDemo1() {
+  let [city, setCity] = useState("");
+  let [list, setList] = useState(["delhi", "calcutta"]);
+
+  const inputCityHandler = (e) => {
+    setCity(e.target.value);
+  };
+
+  const addNewCity = () => {
+    let newlist = [city, ...list];
+    setList(newlist);
+
+    // clear the box
+    setCity("");
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Enter city..."
+        value={city}
+        onChange={inputCityHandler}
+      />
+      <input type="button" value="Add New City" onClick={addNewCity} />
+
+      <ul>
+        {list.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 }
 
 // JSX :: list of string
 function ListDemo() {
-  let [list] = useState(["delhi", "calcutta"]);
+  let [list, setList] = useState(["delhi", "calcutta"]);
+
+  const addNewCity = () => {
+    let newlist = [...list, "Mumbai"];
+    setList(newlist);
+  };
 
   return (
     <div>
-      <h1>List Demo</h1>
+      <hr />
+      <input type="button" value="Add New City" onClick={addNewCity} />
 
-      {/** Example 3 */}
-      {list.map((item) => (
-        <div>
-          <h1>3. {item}</h1>
-        </div>
-      ))}
-
-      {/** Example 2 Multiline */}
-      {list.map((item) => {
-        return (
-          <div>
-            <h1>2. {item}</h1>
-          </div>
-        );
-      })}
-
-      {/** Example 1 */}
-      {list.map((item) => {
-        return <h1>1. {item}</h1>;
-      })}
-
-      {list.map((item) => (
-        <h1>{item}</h1>
-      ))}
+      <ul>
+        {list.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 }
