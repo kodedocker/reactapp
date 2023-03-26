@@ -19,3 +19,7 @@
 - Data Binding
 - Event Handling
 - Counter
+  - Statful Variable (useState)
+  - Array Destructing `let [counter, setCounter] = useState(0);`
+  - Data Binding / Method Binding
+  - Event Handling

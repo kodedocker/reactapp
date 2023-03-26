@@ -1,18 +1,22 @@
-function App() {
-  let btnTitle = "Save Me";
-  let title = "My Project";
+import { useState } from "react";
 
-  let saveMe = () => {
-    console.log("SAVE ME");
+function App() {
+  let counter1 = 0;
+  let [counter, setCounter] = useState(0);
+
+  let handleIncrment = () => {
+    counter1++;
+    console.log(counter1);
+
+    setCounter(counter++);
   };
 
   return (
     <div>
-      <h1>My View Areaaa</h1>
-      <h1 id={title}> {title} </h1>
-      <div name={title}>{title}</div>
-
-      <input type="button" value={btnTitle} onClick={saveMe} />
+      <h1>
+        Counter Demo {counter1} / {counter}
+      </h1>
+      <input type="button" value="INC" onClick={handleIncrment} />
     </div>
   );
 }
