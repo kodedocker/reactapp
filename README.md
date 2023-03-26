@@ -24,7 +24,19 @@
   - Data Binding / Method Binding
   - Event Handling
 - Event Handling
+
   - No Argument
   - event arugment
   - user argument
   - event, user both the argument
+
+- StateFul Variable Declartion
+- Working with Array
+- Styling
+  - css
+  - bootstrap
+- Routing
+- State Managment
+- API Integration
+  - fetch
+  - axios
