@@ -1,5 +1,4 @@
 function App() {
-  // Data Variabl :: Modal
   let btnTitle = "Save Me";
   let title = "My Project";
 
