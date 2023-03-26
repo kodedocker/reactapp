@@ -12,3 +12,10 @@
   - In search area, search for 'Format Save'
   - Under user Subtab - Click check (Format on Save)
   - Under workspace Subtab - Click check (Format on Save)
+
+# Basics Assignment
+
+- Hello World
+- Data Binding
+- Event Handling
+- Counter
