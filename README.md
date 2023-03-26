@@ -31,7 +31,8 @@
   - event, user both the argument
 
 - StateFul Variable Declartion
-- Working with Array
+- Working with Array / List
+- Working with Condition
 - Styling
   - css
   - bootstrap
