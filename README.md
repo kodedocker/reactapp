@@ -23,3 +23,8 @@
   - Array Destructing `let [counter, setCounter] = useState(0);`
   - Data Binding / Method Binding
   - Event Handling
+- Event Handling
+  - No Argument
+  - event arugment
+  - user argument
+  - event, user both the argument
