@@ -1,0 +1,44 @@
+# Example Working with String
+headline: Devops with Kubernetes
+story: |
+  The quick brown fox jump right over
+  the lazy dog. The quick brown fox jump right over
+  the lazy dog. The quick brown fox jump right over
+  The quick brown fox jump right over
+  the lazy dog.
+
+
+# Example 1 Basic key value
+---
+userame: raj
+city: mumbai
+age: 32
+fruits: [apple, mango]
+cities:
+  - DELHI
+  - CALCUTTA
+  - MUMBAI
+---
+# Example 2 with object
+user:
+  name: raj
+  age: 32
+  city: mumbai
+  subjects:
+    - match
+    - physics
+    - chemistry
+
+# Example 3 List of Objects
+list:
+  - user1:
+      name: raj
+      age: 32
+      city: mumbai
+  - user2:
+      name: rohit
+      age: 30
+      city: navi mumbai
+      sports:
+        - cicket
+        - football
