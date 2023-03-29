@@ -1,60 +1,34 @@
-import "./App.css";
 import { useState } from "react";
 
 function App() {
   return (
     <div>
-      {/* <InStylingDemo /> */}
-      <ExternalStylingDemo />
+      <BootstrapStyling />
     </div>
   );
 }
 
-function ExternalStylingDemo() {
-  return (
-    <div>
-      <div className="beautify">Hello CSS!</div>
-    </div>
-  );
-}
-
-function InStylingDemo() {
-  let [color, setColor] = useState("blue");
-  let [styleRef, setStyleRef] = useState({ color: "orange" });
-
-  let themeHandler = (inputColor) => {
-    inputColor = inputColor || "red";
-    setColor(inputColor);
-  };
-
-  let computeStyle = () => {
-    console.log("Compute Style");
-    return { background: "tomato", color: "white" };
-  };
+function BootstrapStyling() {
+  let [list] = useState([1, 11, 11, 11, 1, 1, 1, 11]);
 
   return (
     <div>
-      <h1 style={{ color: "green" }}>Hello Styling</h1>
-      <h1 style={{ color: color }}>Hello Styling</h1>
-      <h1 style={styleRef}>Hello Styling</h1>
+      <h1 className="bg-primary text-light p-3 mb-1 sticky-top">
+        Hello Bootstrap
+      </h1>
 
-      <h1 style={computeStyle()}>Hello Styling</h1>
-
-      <input
-        type="button"
-        value="Red Theme"
-        onClick={(e) => themeHandler("red")}
-      />
-      <input
-        type="button"
-        value="Blue Theme"
-        onClick={(e) => themeHandler("blue")}
-      />
-      <input
-        type="button"
-        value="Green Theme"
-        onClick={(e) => themeHandler("green")}
-      />
+      {list.map((item, index) => (
+        <div key={index} className="alert alert-primary mb-1">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius,
+          distinctio laboriosam. Ab natus tenetur consequuntur, at beatae
+          laborum aperiam reprehenderit maxime libero, obcaecati incidunt
+          aspernatur! Enim vel itaque dicta facere? Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Omnis ipsa reiciendis dolorem velit
+          deleniti dolore dolores? Nostrum placeat necessitatibus quod? Libero,
+          dignissimos. Sapiente exercitationem quibusdam dolores distinctio
+          cupiditate! Adipisci, illum!
+        </div>
+      ))}
     </div>
   );
 }

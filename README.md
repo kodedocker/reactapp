@@ -36,6 +36,8 @@
 - Styling
   - css
   - bootstrap
+    - npm install bootstrap
+    - import "bootstrap/dist/css/bootstrap.css";
   - tailwind
   - material
 - Routing
