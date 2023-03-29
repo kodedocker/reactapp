@@ -36,11 +36,12 @@
 - Styling
   - css
   - bootstrap
-    - npm install bootstrap
-    - import "bootstrap/dist/css/bootstrap.css";
+    - `npm install bootstrap`
+    - `import "bootstrap/dist/css/bootstrap.css";`
   - tailwind
   - material
 - Routing
+  - npm install `react-router-dom`
 - State Managment
 - API Integration
   - fetch
