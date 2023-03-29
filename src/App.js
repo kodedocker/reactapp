@@ -1,9 +1,19 @@
+import "./App.css";
 import { useState } from "react";
 
 function App() {
   return (
     <div>
-      <InStylingDemo />
+      {/* <InStylingDemo /> */}
+      <ExternalStylingDemo />
+    </div>
+  );
+}
+
+function ExternalStylingDemo() {
+  return (
+    <div>
+      <div className="beautify">Hello CSS!</div>
     </div>
   );
 }
