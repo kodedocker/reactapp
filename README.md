@@ -38,11 +38,14 @@
   - bootstrap
     - `npm install bootstrap`
     - `import "bootstrap/dist/css/bootstrap.css";`
+    - `react-bootstrap`
   - tailwind
-  - material
+    -
+  - material [later on]
 - Routing
   - npm install `react-router-dom`
 - State Managment
 - API Integration
   - fetch
   - axios
+  - react query library
