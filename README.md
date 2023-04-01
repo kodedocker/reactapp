@@ -40,7 +40,8 @@
     - `import "bootstrap/dist/css/bootstrap.css";`
     - `react-bootstrap`
   - tailwind
-    -
+    - [Integration](https://tailwindcss.com/docs/guides/create-react-app)
+    - VS Code Plugin - Tailwind CSS IntelliSense
   - material [later on]
 - Routing
   - npm install `react-router-dom`

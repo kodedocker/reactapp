@@ -7,7 +7,7 @@ import Page3 from "./routingcomp/Page3";
 function App() {
   return (
     <BrowserRouter>
-      <AppNav />
+      {/* <AppNav /> */}
       <Routes>
         <Route path="/" element={<Page1 />} />
         <Route path="/page1" element={<Page1 />} />
