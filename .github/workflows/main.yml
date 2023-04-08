@@ -5,6 +5,10 @@ on:
     branches:
       - main # change this to the name of your main branch
 
+concurrency: 
+  group: reactapp
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
